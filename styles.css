@@ -7,28 +7,21 @@ html, body {
   font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 
-div.body {
-  width: 800px;
-  margin: 10px auto;
-}
+@media screen and (min-width: 800px) {
+  div.body {
+    width: 800px;
+    margin: 10px auto;
+  }
+  div.photo {
+    float: left;
+    margin-right: 20px;
+  }
 
-p {
-  margin: 10px 0;
-  text-align: justify;
-  line-height: 1.5em;
-}
-
-a {
-  color: #333;
-}
-
-h1, h2, h3 {
-  text-align: center;
 }
 
 h1 {
   font-size: 3.5em;
-  padding: 30px 0 20px;
+  padding: 40px 0 20px;
 }
 
 h2 {
@@ -41,9 +34,32 @@ h3 {
   margin: 10px 0;
 }
 
-div.photo {
-  float: left;
-  margin: 20px;
+
+@media screen and (max-width: 800px) {
+  div.body {
+    width: 90%;
+    margin: 10px auto;
+  }
+  div.photo p, h1, h2, h3 {
+    text-align: center;
+  }
+  h1 {
+    padding-top: 0;
+  }
+  h2 {
+    margin: 0;
+  }
+
+}
+
+p {
+  margin: 20px 0;
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+a {
+  color: #629622;
 }
 
 div.text {
@@ -58,9 +74,14 @@ div.tagline p {
 }
 
 ul {
-  margin-left: 30px;
+  margin-left: 120px;
 }
 
 ul li {
   margin: 5px 0;
+}
+
+span.highlight {
+  background-color: #ffa;
+  padding: 0 3px;
 }
